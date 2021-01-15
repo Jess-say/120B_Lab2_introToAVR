@@ -22,7 +22,7 @@ int main(void) {
    	 unsigned char tmpB = 0x00;
    	
 	 while (1) {
-	     // 1) Ready input
+	     // 1) Read input
 	     tmpA0 = PINA & 0x01;
 	     tmpA1 = PINA & 0x02;
 
