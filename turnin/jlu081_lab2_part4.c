@@ -23,11 +23,10 @@ int main(void) {
 	unsigned char totalW = 0x00;
 
     	while (1) {
-		totalW = PINA + PINB + PINC; // total weight
-		tmp = ((totalW >> 2) & 0xFC); // shift 2 to the right and set first 2 bits to 0
+		tmp = ((PINA + PINB + PINC) >> 2) & 0xFC; // shift 2 to the right and set first 2 bits to 0
 
 		// checks if weight is > 140
-		if (totalW > 0x8C) {
+		if ((PINA + PINB + PINC) > 0x8C) {
 			tmpD = 0x01;
 		}
 
